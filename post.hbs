@@ -4,6 +4,8 @@
 {{#post}}
 
 <article class="post u-marginBottom40 u-relative">
+    {{!-- Ad post top --}}
+    {{>"ad-post-top"}}
 
     <header class="post-header u-container u-maxWidth740 u-paddingTop30">
         {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
@@ -27,8 +29,8 @@
         {{/if}}
     {{/has}}
 
-    {{!-- Ad post top --}}
-    {{>"ad-post-top"}}
+    {{!-- Ad post Medium --}}
+    {{#if feature_image}}{{>"ad-post-medium"}}{{/if}}
 
 
     <section class="post-body u-container u-maxWidth740 u-relative u-clear">
@@ -53,13 +55,13 @@
         {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.subscribers}}
         <div class="post-newsletter u-marginAuto u-textAlignCenter u-paddingTop30 u-paddingBottom20">
-            <h5 class="u-fontSize28 u-fontWeightBold">Subscribe to</h5>
+            <h5 class="u-fontSize28 u-fontWeightBold">Inscríbete a mi boletín de noticias!</h5>
 
             {{subscribe_form
             form_class="simply-subscribe-tracking newsletter-form u-marginAuto u-flex u-paddingTop30 u-paddingBottom20"
             input_class="form--input u-block u-fontSize20"
             button_class="form--btn u-relative u-overflowHidden u-fontSizeLarge i-send"
-            placeholder="yourname@example.com"
+            placeholder="tunombre@ejemplo.com"
             autofocus=""
             }}
         </div>
