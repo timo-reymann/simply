@@ -4,6 +4,9 @@
 {{!-- Ad home top --}}
 {{>"ad-home-top"}}
 
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "simply_class_body"}}is-frontpage{{/contentFor}}
+
 <div class="feed-entry-content">
     {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}
     <div class="feed-entry-wrap u-maxWidth1000 u-marginAuto u-marginTop30 u-marginBottom40" data-page="{{#is "paged"}}/page/{{pagination.page}}{{/is}}/">
